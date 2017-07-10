@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Giỏ Hàng</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		body{
+			font-family: Arial,sans-serif;
+			background-color: #d4d6d8;
+		}
+		#wrapper{
+			background-color: #d4d6d8;
+			width: 100%;
+		}
+		table{
+			width:75%;
+			background-color: white ;
+		}
+		td{
+			line-height: 2.0;
+		}
+		#img1{
+			width:7%; height:7%;
+			
+		}
+		a{
+			color: #007ff0;
+			text-decoration: none;
+		}
+		.font1{
+			color: #777777;
+			font-size: 95%;
+		}
+	</style>
+	<script type="text/javascript">
+		
+		function plusOnClick(){
+             document.getElementById("sl").value = Number(document.getElementById("sl").value) + 1;
+		}
+		function minusOnClick(){
+			if(document.getElementById("sl").value > 0)
+             document.getElementById("sl").value = Number(document.getElementById("sl").value) - 1;
+		}
+	</script>
+</head>
+<body>
+
+<div id="wrapper">
+<br>
+    <div style="padding-left: 10px;"><b>GIỎ HÀNG</b><span style="font-size: 90%"> (1 sản phẩm)</span></div>
+    <div>
+   
+	    <div style="float:right;width: 24%;padding-top: 10px;">
+		<table>
+			<tr>
+				<td style="padding-top: 20px;"">Tạm tính:</td>
+				<td align="right" style="padding-top: 20px;padding-right: 10px">18.000 <u>đ</u></td>
+			</tr>
+			<tr>
+				<td style="vertical-align: top">Thành tiền: </td>
+				<td align="right" ><div style="font-size: 150%;color: #ff424e;padding-right: 10px">18.000 <u>đ</u></div>
+				    <div style="font-size: 90%;padding-right: 10px">(Đã bao gồm VAT)</div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" style="background-color: #d4d6d8;height: 7px;border:1px solid #d4d6d8;"></td>
+			</tr>
+			<tr>
+			   <td colspan="2">
+				   <form action="https://tiki.vn/checkout/cart">
+				   <button style="color:white;font-size:90%;background-color: #ff424e;width: 100%;height: 50px" onclick="">Tiến hành đặt hàng</button>
+				   </form>
+			   </td>
+				
+			</tr>		
+		</table>	
+	   </div>
+	   
+	
+   <div style="padding-left: 10px;padding-top: 10px">
+  <table>
+  <tr>
+     <td>   </td>    
+     <td></td>
+  </tr>
+  <tr>
+    <td width="15%" rowspan="5" style="width:1%;white-space:nowrap;"><img src="img/conan2.jpg" alt="conan2" title="Ảnh bìa chính thức" style="padding-top: 20px;"></td>
+    <td width="55%"style="padding-top: 20px;">Thám Tử Lừng Danh Conan Tập 2 (Tái Bản 2014)</td>    
+    <td width="15%" align="right" style="padding-top: 20px;"><strong>18.000 <u>đ</u></strong></td>
+    <td width="15%" align="right" style="padding-top: 20px;">
+        <div style="padding-right: 10px;">
+        	<button onclick="minusOnClick()">-</button><input type="text" id="sl" value="0" style="text-align: center;white-space:nowrap;width: 25%"><button onclick="plusOnClick()">+</button>
+        </div></td>
+  </tr>
+  <tr>
+    <td ><div><img id="img1" src="img/fast24.jpg" alt="fast24" title="Fast And Furious" ></div></td>
+    <td class="font1" align="right" style="padding-top: 1px;"><del>20.000 <u>đ</u></del></td>
+    
+  </tr>
+  <tr>
+   <td class="font1">Bìa Mềm - Tác giả: <a href="https://www.google.com.vn">Aoyama Gosho</a></td>
+   <td align="right"><button disabled="true" style="background:#ff9601;color: #777777; ">-10%</button></td>
+  </tr>
+  <tr>
+  	<td class="font1">Sách có thể đọc bằng: <a href="https://www.google.com.vn">BookCare</a></td>
+  </tr>
+  <tr>
+  	 <td style="font-size: 95%;">Cung cấp bởi <a href="https://www.google.com.vn">TIKI.VN</a></td> 
+  </tr>
+  <tr>
+  	<td></td>
+  	<td>    	
+    	<div style="font-size:90%;line-height: 2.5"><a href="https://www.google.com.vn">Xóa &nbsp;&nbsp;&nbsp;&nbsp;Để dành mua sau</a></div>
+    </td>
+  </tr>
+</table>
+ </div>
+
+   
+    </div>
+    
+ 
+</div>
+
+</body>
+</html>
