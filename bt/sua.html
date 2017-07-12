@@ -1,0 +1,60 @@
+<%@page import="database.ConnectDB"%>
+<%@page import="database.Member"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<%
+		response.setCharacterEncoding("utf-8");
+		response.setContentType("text/html");
+		request.setCharacterEncoding("utf-8");
+		int id = Integer.parseInt(request.getParameter("id"));
+		Member member = new Member();
+		ConnectDB run = new ConnectDB();
+		member = run.getInfoMember(id);
+		System.out.print(member.getTen());
+	%>
+	<div class="container">
+		<div class="row">
+			<center>
+				<h3 style="color: red">Thêm thành viên</h3>
+			</center>
+		</div>
+		<br> <br>
+		<div class="col-sm-2"></div>
+		<div class="col-sm-8">
+			<form method="post" action="/Jsp_day1/eventSua.jsp">
+				<div class="form-group">
+					<label >Id thành viên : </label> 
+					<input type="text" class="form-control" name="id" readonly="readonly" value=<%=member.getId() %>>
+				</div>
+				<div class="form-group">
+					<label >Họ và tên : </label> 
+					<input type="text" class="form-control" name="ten" value="<%=member.getTen()%>">
+				</div>
+				<div class="form-group">
+					<label>Account :</label> 
+					<input type="text"class="form-control" name="account" value="<%=member.getAccount()%>">
+				</div>
+				<div class="form-group">
+					<label>Địa chỉ :</label> 
+					<input type="text"class="form-control" name="diaChi" value="<%=member.getDiaChi()%>">
+				</div>
+				<div align="center" style="margin-top: 50px">
+					<button type="submit" class="btn btn-primary" style="width:200px">Sửa thành viên</button>
+					<button type="button" class="btn btn-success" style="width:200px" onclick="history.back(-1)">Quay lại</button>
+				</div>
+			</form>
+		</div>
+		<div class="col-sm-2"></div>
+	</div>
+</body>
+</html>

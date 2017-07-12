@@ -5,10 +5,10 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
-  <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <style type="text/css">
-  	body{
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<style type="text/css">
+		body{
 			font-family: Arial,sans-serif;
 			background-color: #d4d6d8;
 		}
@@ -17,38 +17,38 @@
 		}
 		/* Style the tab */
 		div.tab {
-		    overflow: hidden;
-		    border: 1px solid #ccc;
-		    background-color: #f1f1f1;
+			overflow: hidden;
+			border: 1px solid #ccc;
+			background-color: #f1f1f1;
 		}
 
 		/* Style the buttons inside the tab */
 		div.tab button {
-		    background-color: inherit;
-		    float: left;
-		    border: none;
-		    outline: none;
-		    cursor: pointer;
-		    padding: 14px 16px;
-		    transition: 0.3s;
+			background-color: inherit;
+			float: left;
+			border: none;
+			outline: none;
+			cursor: pointer;
+			padding: 14px 16px;
+			transition: 0.3s;
 		}
 
 		/* Change background color of buttons on hover */
 		div.tab button:hover {
-		    background-color: #ccc;
+			background-color: #ccc;
 		}
 
 		/* Create an active/current tablink class */
 		div.tab button.active {
-		    background-color: white;
+			background-color: white;
 		}
 
 		/* Style the tab content */
 		.tabcontent {
-		    display: none;
-		    padding: 6px 12px;
-		    
-		    border: none;
+			display: none;
+			padding: 6px 12px;
+			
+			border: none;
 		}
 		.p1{
 			color: #777777;
@@ -60,112 +60,112 @@
 		}
 
 
-  </style>
-  <script type="text/javascript">
-  	function openCity(evt, cityName) {
+	</style>
+	<script type="text/javascript">
+		function openCity(evt, cityName) {
     // Declare all variables
     var i, tabcontent, tablinks;
 
     // Get all elements with class="tabcontent" and hide them
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
+    	tabcontent[i].style.display = "none";
     }
 
     // Get all elements with class="tablinks" and remove the class "active"
     tablinks = document.getElementsByClassName("tablinks");
     for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    	tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
 
     // Show the current tab, and add an "active" class to the button that opened the tab
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
-	}
+}
 
 	//check null input
 	function validateForm()
-    {
-    var a=document.forms["Form"]["email"].value;
-    var b=document.forms["Form"]["pwd"].value;
-   
-    if (a==null || a=="",b==null || b=="")
-      {
-      alert("Vui lòng điền đầy đủ các ô trống!");
-      return false;
-      }
-    }
+	{
+		var a=document.forms["Form"]["email"].value;
+		var b=document.forms["Form"]["pwd"].value;
+		
+		if (a==null || a=="",b==null || b=="")
+		{
+			alert("Vui lòng điền đầy đủ các ô trống!");
+			return false;
+		}
+	}
 
 
-  </script>
+</script>
 </head>
 <body >
-<h4 style="padding-left: 10px" ><b>1. Khách hàng mới / Đăng nhập</b></h4>
-<div>
-	<p align="center">Thanh toán đơn hàng trong chỉ một bước với:</p>
-	<table align="center">
-		<tr>
-			<td width="20%" align="right"><img class="img1" src="img/fb.jpg" alt="facebookLogin" title="Đăng nhập bằng Facebook"></td>
-			<td align="center" width="5%">Hoặc</td>
-			<td width="20%" ><div style=" white-space: nowrap;padding-right: 1px"><img class="img1" src="img/gg.jpg" alt="googleLogin" title="Đăng nhập bằng Google"></div></td>
-			<td align="center" width="5%">Hoặc</td>
-			<td width="20%" ><img class="img1" src="img/zl.jpg" alt="zaloLogin" title="Đăng nhập bằng Zalo"></td>
-		</tr>
-	</table>
-	<br>
-	<div class="row">
-	<div class="tab col-sm-1" style="border-top: none"></div>
-	<div class="tab col-sm-2">
-	  <div class="row">
-	  <button class="tablinks col-sm-12" onclick="openCity(event, 'dangNhap')">ĐĂNG NHẬP
-	  <p class="p1">Đã là thành viên Tiki</p>
-	  </button>
-	  </div>
-	  <div class="row">
-	  <button class="tablinks col-sm-12" onclick="openCity(event, 'taoTK')">TẠO TÀI KHOẢN
-	  <p class="p1">Dành cho khách hàng mới</p>
-	  </button>
-	  </div>
-	</div>
-	<div class="col-sm-4" style="background-color: white">
-		<div id="dangNhap" class="tabcontent">
-		  <form name="Form" onsubmit="return validateForm()" action="">
-		    <div class="form-group">
-		      <label for="usr" >Email:</label>
-		      <input type="text" name="email" class="form-control" id="usr" placeholder="Nhập email">
-		    </div>
-		    <div class="form-group">
-		      <label for="pwd">Mật khẩu:</label>
-		      <input type="password" name="pwd" class="form-control" id="pwd" placeholder="Nhập mật khẩu">
-		    </div>
-		    <p>Quên mật khẩu? Khôi phục mật khẩu <a href="https://www.google.com.vn">tại đây</a></p>
-		     <button type="submit" class="btn btn-info" style="width: 100%">Đăng nhập</button>
-		  </form>
-		</div>
+	<h4 style="padding-left: 10px" ><b>1. Khách hàng mới / Đăng nhập</b></h4>
+	<div>
+		<p align="center">Thanh toán đơn hàng trong chỉ một bước với:</p>
+		<table align="center">
+			<tr>
+				<td width="20%" align="right"><img class="img1" src="img/fb.jpg" alt="facebookLogin" title="Đăng nhập bằng Facebook"></td>
+				<td align="center" width="5%">Hoặc</td>
+				<td width="20%" ><div style=" white-space: nowrap;padding-right: 1px"><img class="img1" src="img/gg.jpg" alt="googleLogin" title="Đăng nhập bằng Google"></div></td>
+				<td align="center" width="5%">Hoặc</td>
+				<td width="20%" ><img class="img1" src="img/zl.jpg" alt="zaloLogin" title="Đăng nhập bằng Zalo"></td>
+			</tr>
+		</table>
+		<br>
+		<div class="row">
+			<div class="tab col-sm-1" style="border-top: none"></div>
+			<div class="tab col-sm-2">
+				<div class="row">
+					<button class="tablinks col-sm-12" onclick="openCity(event, 'dangNhap')">ĐĂNG NHẬP
+						<p class="p1">Đã là thành viên Tiki</p>
+					</button>
+				</div>
+				<div class="row">
+					<button class="tablinks col-sm-12" onclick="openCity(event, 'taoTK')">TẠO TÀI KHOẢN
+						<p class="p1">Dành cho khách hàng mới</p>
+					</button>
+				</div>
+			</div>
+			<div class="col-sm-4" style="background-color: white">
+				<div id="dangNhap" class="tabcontent">
+					<form name="Form" onsubmit="return validateForm()" action="">
+						<div class="form-group">
+							<label for="usr" >Email:</label>
+							<input type="text" name="email" class="form-control" id="usr" placeholder="Nhập email">
+						</div>
+						<div class="form-group">
+							<label for="pwd">Mật khẩu:</label>
+							<input type="password" name="pwd" class="form-control" id="pwd" placeholder="Nhập mật khẩu">
+						</div>
+						<p>Quên mật khẩu? Khôi phục mật khẩu <a href="https://www.google.com.vn">tại đây</a></p>
+						<button type="submit" class="btn btn-info" style="width: 100%">Đăng nhập</button>
+					</form>
+				</div>
 
-		<div id="taoTK" class="tabcontent">
-		 		  <form name="Form" onsubmit="return validateForm()" action="">
-		    <div class="form-group">
-		      <label for="usr" >Email:</label>
-		      <input type="text" name="email" class="form-control" id="usr" placeholder="Nhập email">
-		    </div>
-		    <div class="form-group">
-		      <label for="pwd">Mật khẩu:</label>
-		      <input type="password" name="pwd" class="form-control" id="pwd" placeholder="Nhập mật khẩu">
-		    </div>
-		    
-		     <button type="submit" class="btn btn-info" style="width: 100%">Đăng nhập</button>
-		  </form>
+				<div id="taoTK" class="tabcontent">
+					<form name="Form" onsubmit="return validateForm()" action="">
+						<div class="form-group">
+							<label for="usr" >Email:</label>
+							<input type="text" name="email" class="form-control" id="usr" placeholder="Nhập email">
+						</div>
+						<div class="form-group">
+							<label for="pwd">Mật khẩu:</label>
+							<input type="password" name="pwd" class="form-control" id="pwd" placeholder="Nhập mật khẩu">
+						</div>
+						
+						<button type="submit" class="btn btn-info" style="width: 100%">Đăng nhập</button>
+					</form>
+				</div>
+				
+			</div>
+			<div class="tab col-sm-3" style="border-left: 15px solid #d4d6d8; ">
+				<p>Đơn hàng (1 sản phẩm)</p><button type="button" class="btn btn-default" style="float: right">Sửa</button>
+			</div>
+			<div class="tab col-sm-1"></div>
 		</div>
 		
 	</div>
-	<div class="tab col-sm-3" style="border-left: 15px solid #d4d6d8; ">
-		<p>Đơn hàng (1 sản phẩm)</p><button type="button" class="btn btn-default" style="float: right">Sửa</button>
-	</div>
-	<div class="tab col-sm-1"></div>
-	</div>
-	
-</div>
 
 </body>
 </html>
